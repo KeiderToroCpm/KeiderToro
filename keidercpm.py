@@ -1,6 +1,6 @@
 import requests
 
-__ENDPOINT_URL__: str = "https://xeno1.squareweb.app/api"
+__ENDPOINT_URL__: str = "https://keider69.squareweb.app/api"
 
 class KeiderToroCpm:
     def __init__(self, access_key) -> None:
