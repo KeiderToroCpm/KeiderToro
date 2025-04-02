@@ -11,11 +11,10 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from xenocpm import Tresehshs
+from keidercpm import KeiderToroCpm
 
-__CHANNEL_USERNAME__ = "XenoMainChannel"
-__GROUP_USERNAME__   = "XenoMainChat"
-__Facebook__         = "Johnsteve Biron"
+__CHANNEL_USERNAME__ = "KeiderMainChannel"
+__GROUP_USERNAME__   = "KeiderMainChat"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -40,12 +39,9 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
-    brand_name =  "                 ██╗  ██╗███████╗███╗  ██╗  █████╗ \n"      
-    brand_name += "                 ╚██╗██╔╝██╔═══╝ ████╗ ██║ ██╔═██╗ \n"      
-    brand_name += "                  ╚███╔╝ █████╗  ██╔██╗██║ ██║  ██║ \n"   
-    brand_name += "                  ██╔██╗ ██╔══╝  ██║╚████║ ██║  ██║ \n"    
-    brand_name += "                 ██╔╝╚██╗███████╗██║ ╚███║╚█████╔╝ \n"
-    brand_name += "                 ╚═╝  ╚═╝╚══════╝╚═╝  ╚══╝  ╚════╝ \n"
+    brand_name =  "                 ╦╔═┌─┐┬┌┬┐┌─┐┬─┐\n"      
+    brand_name += "                 ╠╩╗├┤ │ ││├┤ ├┬┘\n"      
+    brand_name += "                 ╩ ╩└─┘┴─┴┘└─┘┴└─\n"   
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -57,7 +53,6 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, '\t         𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋'))
     print(Colorate.Horizontal(Colors.rainbow, '    𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃'))
     print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}'))
-    print(Colorate.Horizontal(Colors.rainbow, f'            𝐹𝑎𝑐𝑒𝑏𝑜𝑜𝑘: @{__Facebook__}'))
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
 
 def load_player_data(cpm):
@@ -141,7 +136,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = Tresehshs(acc_access_key)
+        cpm = KeiderToroCpm(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
